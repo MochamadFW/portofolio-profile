@@ -2,16 +2,15 @@ import type { Metadata } from "next";
 import { Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
-// Load the Press Start 2P font
 const pressStart2P = Press_Start_2P({
-  weight: "400", // Specify the font weight
-  subsets: ["latin"], // Specify the subset
-  variable: "--font-press-start-2p", // Define a CSS variable for the font
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-press-start-2p",
 });
 
 export const metadata: Metadata = {
-  title: "MOCHAMADFW - PORTOFOLIO",
-  description: "MOCHAMADFW Portofolio Profile",
+  title: "MOCHAMADFW - PORTFOLIO",
+  description: "MOCHAMADFW Portfolio Profile",
 };
 
 export default function RootLayout({
