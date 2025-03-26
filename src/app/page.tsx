@@ -22,10 +22,15 @@ export default function Home() {
       <section id="about" className="p-4 md:p-8">
         <SectionTitle>About Me</SectionTitle>
         <p className="font-retro text-retro-yellow text-sm sm:text-base md:text-lg max-w-2xl mx-auto text-center">
-          Hi, I’m a developer who loves creating retro-style websites and games. I specialize in
-          front-end development and have a passion for pixel art and 8-bit aesthetics.
+          I'm a graduate of Applied Informatics Engineering from Bandung State Polytechnic, passionate about developing efficient and scalable software solutions.
+          Skilled in building dynamic REST APIs with PHP Laravel and NodeJS.
+          Proficient in database management with MySQL, PostgreSQL, and MongoDB, I also leverage Redis and RabbitMQ for system optimization.
+          My journey is defined by a commitment to excellence, innovation, and impactful contributions to software development.
         </p>
       </section>
+
+      {/* Spacer Section */}
+      <section className="py-12 md:py-24"></section>
 
       {/* Projects Section */}
       <section id="projects" className="p-4 md:p-8">
@@ -33,31 +38,40 @@ export default function Home() {
         {/* Horizontal Scroll Container */}
         <div className="flex overflow-x-auto hide-scrollbar md:overflow-x-visible md:grid md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <ProjectCard
-            title="Retro Game"
-            description="A fun retro-style game built with JavaScript."
-            imageUrl="/path/to/project1.png"
+            title="SINBADA"
+            description="Inventory Management System built on ReactJs and Ruby."
+            imageUrl="/images/player.png"
             demoUrl="https://example.com"
           />
           <ProjectCard
-            title="Portfolio Website"
-            description="My personal portfolio website with an 8-bit theme."
-            imageUrl="/path/to/project2.png"
+            title="SIINVENT"
+            description="Inventory Management System built on ReactJs and ExpressJs."
+            imageUrl="/images/player.png"
             demoUrl="https://example.com"
           />
           <ProjectCard
-            title="Pixel Art Generator"
-            description="A tool for creating pixel art online."
-            imageUrl="/path/to/project3.png"
+            title="PERSIB Application"
+            description="Super Apps for PERSIB football club built on Flutter, ExpressJs, Strapi, and ReactJs"
+            imageUrl="/images/player.png"
             demoUrl="https://example.com"
           />
           <ProjectCard
-            title="Pixel Art Generator"
-            description="A tool for creating pixel art online."
-            imageUrl="/path/to/project3.png"
+            title="RISE Application"
+            description="English course application built on flutter and PHP Laravel 11."
+            imageUrl="/images/player.png"
+            demoUrl="https://example.com"
+          />
+          <ProjectCard
+            title="DiDATA"
+            description="Inventory & Asset Management System built on VueJs and Golang."
+            imageUrl="/images/player.png"
             demoUrl="https://example.com"
           />
         </div>
       </section>
+
+      {/* Spacer Section */}
+      <section className="py-12 md:py-24"></section>
 
       {/* Contact Section */}
       <section id="contact" className="p-4 md:p-8">

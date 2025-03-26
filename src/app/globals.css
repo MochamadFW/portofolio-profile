@@ -65,6 +65,26 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+/* Cloud Animation */
+@keyframes moveCloud {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.pixel-cloud {
+  position: absolute;
+  top: 20%; /* Adjust the vertical position */
+  width: 100px; /* Adjust the size of the cloud */
+  height: auto;
+  animation: moveCloud 20s linear infinite; /* Adjust the duration for slower/faster movement */
+  image-rendering: pixelated;
+  z-index: 1; /* Ensure clouds are behind the text */
+}
+
 /* body {
   background: var(--background);
   color: var(--foreground);

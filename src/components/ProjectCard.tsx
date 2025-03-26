@@ -18,12 +18,12 @@ export default function ProjectCard({
       <img src={imageUrl} alt={title} className="w-full h-32 object-cover" />
       <h2 className="text-retro-yellow text-2xl mt-4">{title}</h2>
       <p className="text-retro-green mt-2">{description}</p>
-      <a
+      {/* <a
         href={demoUrl}
         className="inline-block mt-4 font-retro bg-retro-pink text-retro-blue px-4 py-2"
       >
         View Demo
-      </a>
+      </a> */}
     </div>
   );
 }
