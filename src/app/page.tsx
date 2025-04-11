@@ -35,36 +35,43 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="p-4 md:p-8">
         <SectionTitle>Projects</SectionTitle>
-        {/* Horizontal Scroll Container */}
-        <div className="flex overflow-x-auto hide-scrollbar md:overflow-x-visible md:grid md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {/* Scroll container with snap behavior */}
+        <div className="flex snap-x snap-mandatory overflow-x-auto hide-scrollbar gap-4 pb-4 
+                      md:overflow-x-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
           <ProjectCard
             title="SINBADA"
             description="Inventory Management System built on ReactJs and Ruby."
-            imageUrl="/images/player.png"
+            imageUrl="/images/sinbada.png"
             demoUrl="https://example.com"
           />
           <ProjectCard
             title="SIINVENT"
             description="Inventory Management System built on ReactJs and ExpressJs."
-            imageUrl="/images/player.png"
+            imageUrl="/images/siinvent.jpeg"
             demoUrl="https://example.com"
           />
           <ProjectCard
             title="PERSIB Application"
             description="Super Apps for PERSIB football club built on Flutter, ExpressJs, Strapi, and ReactJs"
-            imageUrl="/images/player.png"
+            imageUrl="/images/Persib.PNG"
             demoUrl="https://example.com"
           />
           <ProjectCard
             title="RISE Application"
             description="English course application built on flutter and PHP Laravel 11."
-            imageUrl="/images/player.png"
+            imageUrl="/images/rise.PNG"
             demoUrl="https://example.com"
           />
           <ProjectCard
             title="DiDATA"
             description="Inventory & Asset Management System built on VueJs and Golang."
-            imageUrl="/images/player.png"
+            imageUrl="/images/didata.PNG"
+            demoUrl="https://example.com"
+          />
+          <ProjectCard
+            title="Jarkomdat Disdukcapil"
+            description="System information for monitoring restitution SLA Telkom Indonesia"
+            imageUrl="/images/dukcapil.PNG"
             demoUrl="https://example.com"
           />
         </div>

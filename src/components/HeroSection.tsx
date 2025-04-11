@@ -4,15 +4,15 @@ import { useState } from 'react';
 import RetroButton from '@/components/RetroButton';
 
 export default function HeroSection() {
-  const [showPdfModal, setShowPdfModal] = useState(false);
+  const [showImageModal, setShowImageModal] = useState(false);
 
-  const togglePdfModal = () => {
-    setShowPdfModal(!showPdfModal);
+  const toggleImageModal = () => {
+    setShowImageModal(!showImageModal);
   };
 
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center p-4 md:p-8 relative overflow-hidden">
-      {/* Moving Cloud Elements */}
+      {/* Moving Cloud Elements (unchanged) */}
       <img
         src="/images/cloud.png"
         alt="Pixel Cloud"
@@ -55,51 +55,39 @@ export default function HeroSection() {
         <p className="font-retro text-retro-blue text-base sm:text-lg md:text-xl mb-8">
           ps: i'm a backend developer
         </p>
-        <RetroButton onClick={togglePdfModal}>
+        <RetroButton onClick={toggleImageModal}>
           Explore My Work
         </RetroButton>
       </div>
 
-      {/* PDF Modal */}
-      {showPdfModal && (
+      {/* Image Modal */}
+      {showImageModal && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
-          onClick={togglePdfModal}
+          onClick={toggleImageModal}
         >
           <div 
-            className="relative bg-retro-white border-4 border-retro-pink rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            className="relative bg-retro-white border-4 border-retro-pink rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
             <div className="bg-retro-pink p-2 flex justify-between items-center">
               <h3 className="font-retro text-retro-white text-lg">My CV Preview</h3>
               <button 
-                onClick={togglePdfModal}
+                onClick={toggleImageModal}
                 className="font-retro text-retro-white hover:text-retro-yellow text-xl px-2"
               >
                 ✕
               </button>
             </div>
             
-            {/* PDF Content */}
-            <div className="h-[calc(80vh-50px)] bg-gray-100">
-              <iframe 
-                src="/cv-mochamadfw.pdf#toolbar=0&navpanes=0" 
-                className="w-full h-full border-0"
-                title="CV Preview"
-              >
-                <div className="p-4 text-center">
-                  <p className="font-retro text-retro-blue mb-4">Your browser doesn't support PDF preview.</p>
-                  <a 
-                    href="/cv-mochamadfw.pdf" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-retro px-6 py-2 rounded-lg border-2 border-retro-black shadow-retro bg-retro-yellow text-retro-black hover:bg-retro-blue hover:text-retro-white inline-block"
-                  >
-                    Open CV in New Tab
-                  </a>
-                </div>
-              </iframe>
+            {/* Image Content */}
+            <div className="bg-gray-100 flex justify-center p-4">
+              <img 
+                src="/cv-mochamadfw-image.jpg" 
+                alt="CV Preview"
+                className="max-w-full max-h-[70vh] object-contain"
+              />
             </div>
             
             {/* Modal Footer */}
@@ -107,8 +95,8 @@ export default function HeroSection() {
               <button
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/cv-mochamadfw.pdf';
-                  link.download = 'my_cv.pdf';
+                  link.href = '/CV Mochamad Fadillah Wijaya.pdf';
+                  link.download = 'CV Mochamad Fadillah Wijaya.pdf';
                   link.click();
                 }}
                 className="font-retro px-6 py-2 rounded-lg border-2 border-retro-black shadow-retro bg-retro-yellow text-retro-black hover:bg-retro-blue hover:text-retro-white transition-all hover:translate-y-1"
@@ -116,7 +104,7 @@ export default function HeroSection() {
                 Download CV
               </button>
               <button
-                onClick={togglePdfModal}
+                onClick={toggleImageModal}
                 className="font-retro px-6 py-2 rounded-lg border-2 border-retro-black shadow-retro bg-retro-blue text-retro-white hover:bg-retro-yellow hover:text-retro-black transition-all hover:translate-y-1"
               >
                 Close Preview
